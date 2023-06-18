@@ -1,0 +1,11 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  },
+  "scripts": {
+    "server": "json-server --watch ./db.json --port ${PORT:-8080} --host ${HOST:-localhost}"
+  },
+  "license": "MIT"
+}

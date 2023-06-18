@@ -1,0 +1,27 @@
+services:
+  celus_travel_blog_server:
+    container_name: celus_travel_blog_server
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8080
+    volumes:
+      - ./api/db.json:/app/db.json
+    ports:
+      - "8080:8080"
+
+  celus_travel_blog_ui:
+    container_name: celus_travel_blog_ui
+    build:
+      context: ./ui
+      dockerfile: Dockerfile
+    depends_on:
+      - celus_travel_blog_server
+    environment:
+      - API_HOST=celus_travel_blog_server:8080
+    volumes:
+      - ./ui/src:/app/src
+    ports:
+      - "3000:3000"
