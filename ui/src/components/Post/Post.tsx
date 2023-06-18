@@ -6,9 +6,8 @@ const Post = ({ item }: IProps): JSX.Element => {
   const { title, body, image } = item;
   const dispatch = useAppDispatch();
 
-  const handleClick = async (): Promise<any> => {
-    // @ts-ignore
-    dispatch(getPostById);
+  const handleClick = async (): Promise<void> => {
+    dispatch(getPostById(item.id));
   };
 
   return (
