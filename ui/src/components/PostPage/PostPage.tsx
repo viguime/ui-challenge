@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { AppState } from 'state_management/store';
-import { PostContainer, PostPageImageContainer, PostTitle, PostBody, PostDialogImage } from './styles';
+import { PostContainer, PostPageImageContainer, PostTitle, PostBody, PostDialogImage, FlexContainer, FlexContainerVertical } from './styles';
 import { useParams } from 'react-router-dom';
 
 const PostPage = (): JSX.Element | null => {
@@ -18,11 +18,15 @@ const PostPage = (): JSX.Element | null => {
   return (
     <>
       <PostContainer>
-        <PostPageImageContainer>
-          <PostDialogImage src={image} />
-        </PostPageImageContainer>
-        <PostTitle>{title}</PostTitle>
-        <PostBody>{body}</PostBody>
+        <FlexContainer>
+          <PostPageImageContainer>
+            <PostDialogImage src={image} />
+          </PostPageImageContainer>
+          <FlexContainerVertical>
+            <PostTitle>{title}</PostTitle>
+            <PostBody>{body}</PostBody>
+          </FlexContainerVertical>
+        </FlexContainer>
       </PostContainer>
     </>
   );
