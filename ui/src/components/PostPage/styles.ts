@@ -53,3 +53,35 @@ export const FlexContainerVertical = styled.div`
   justify-content: flex-start;
   margin: 10px;
 `;
+
+export const CommentContainer = styled.div`
+  margin-top: 20px;
+  background-color: grey;
+`;
+
+export const CommentTitle = styled.h2`
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+`;
+
+export const CommentList = styled.div`
+  max-height: 200px;
+  overflow-y: auto; 
+`;
+export const CommentItem = styled.li`
+  margin-bottom: 10px;
+`;
+
+export const CommentAuthor = styled.span`
+  font-weight: bold;
+`;
+
+export const CommentText = styled.p`
+  margin-top: 5px;
+`;
+export const CommentCounter = styled.div`
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 10px;
+`;
