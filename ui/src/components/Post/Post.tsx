@@ -1,13 +1,16 @@
 import { IProps } from './IProps';
 import { ImageContainer, Image, PostContainer, Title, Description, BodyContainer } from './styles';
-import { getPostById } from 'state_management/actions/posts/posts.actions';
-import { useAppDispatch } from 'state_management/hooks';
+// import { getPostById } from 'state_management/actions/posts/posts.actions';
+// import { useAppDispatch } from 'state_management/hooks';
+import { useNavigate } from 'react-router-dom';
 const Post = ({ item }: IProps): JSX.Element => {
   const { title, body, image } = item;
-  const dispatch = useAppDispatch();
+  // const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
   const handleClick = async (): Promise<void> => {
-    dispatch(getPostById(item.id));
+    // dispatch(getPostById(item.id));
+    navigate(`/post/${item.id}`);
   };
 
   return (

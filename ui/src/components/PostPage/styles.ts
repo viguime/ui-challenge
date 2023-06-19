@@ -19,3 +19,18 @@ export const PostBody = styled.p`
   line-height: 24px;
   color: #333333;
 `;
+
+export const PostPageImageContainer = styled.div`
+  width: 50%;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  overflow: hidden;
+`;
+
+export const PostDialogImage = styled.img`
+  object-fit: cover;
+  object-position: center;
+`;
